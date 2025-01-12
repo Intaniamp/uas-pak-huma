@@ -4,10 +4,6 @@ body {
 #cart-items-list li {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-#cart-items-list li {
   margin: 10px 0;
 }
 
