@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const viewCartButton = document.querySelector(".view-cart-btn");
   if (viewCartButton) {
     viewCartButton.addEventListener("click", function () {
-      window.location.href = "cart.html"; // Arahkan ke halaman cart
+      window.location.href = "cartpages.html"; // Arahkan ke halaman cart
     });
   }
 
