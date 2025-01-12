@@ -12,13 +12,16 @@ function addToCart(productName, productPrice) {
   cartItems.push({ name: productName, price: productPrice });
   cartCount++;
   updateCartCount();
+  localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Simpan cart ke localStorage
+  localStorage.setItem("cartCount", cartCount);
 }
 
 function removeFromCart(index) {
   cartItems.splice(index, 1);
   cartCount--;
   updateCartCount();
-  viewCart();
+  localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Simpan cart setelah penghapusan
+  location.reload();
 }
 
 function viewCart() {
@@ -31,7 +34,9 @@ function viewCart() {
 
   cartItems.forEach((item, index) => {
     const listItem = document.createElement("li");
-    listItem.textContent = `${item.name} - Rp${item.price}`;
+    listItem.textContent = `${item.name} - Rp${item.price.toLocaleString(
+      "id-ID"
+    )}`;
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
@@ -45,8 +50,7 @@ function viewCart() {
     total += item.price;
   });
 
-  cartTotal.textContent = `Total: Rp${total}`;
-
+  cartTotal.textContent = `Total: Rp${total.toLocaleString("id-ID")}`;
   cartSection.style.display = "block";
 }
 
@@ -62,13 +66,22 @@ document.addEventListener("DOMContentLoaded", function () {
           .textContent.replace("Rp", "")
           .replace(".", "")
       );
-
       addToCart(productName, productPrice);
     });
   });
 
   const viewCartButton = document.querySelector(".view-cart-btn");
   if (viewCartButton) {
-    viewCartButton.addEventListener("click", viewCart);
+    viewCartButton.addEventListener("click", function () {
+      window.location.href = "cart.html"; // Arahkan ke halaman cart
+    });
+  }
+
+  // Jika berada di halaman cart.html, tampilkan cart
+  if (window.location.pathname.includes("cart.html")) {
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cartItems = storedCartItems;
+    cartCount = storedCartItems.length;
+    viewCart();
   }
 });
