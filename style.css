@@ -316,7 +316,7 @@ footer {
 
 .view-cart-btn {
   cursor: pointer;
-  background-color: #ce5f3d;
+  background-color: #750404;
   color: white;
   padding: 10px;
   border: none;
@@ -324,7 +324,7 @@ footer {
 }
 
 .view-cart-btn:hover {
-  background-color: #45a049;
+  background-color: #fa6da5;
 }
 
 .product-card {
@@ -397,13 +397,14 @@ button:hover {
   background-color: #0056b3;
 }
 
-.table{
+.table {
   width: 100%;
   background-color: rgba(0, 0, 0, 03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   border-left: 1px solid rgba(0, 0, 0, 0.125);
 }
-.th, td{
+.th,
+td {
   border-right: 1px solid rgba(0, 0, 0, 0.125);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   padding: 10px;
