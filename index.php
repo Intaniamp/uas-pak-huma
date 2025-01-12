@@ -32,6 +32,31 @@
       <span id="cart-total">0</span></p>
     </section>
 
+    <div class="carousel-heading">
+      <h2>Shop with the Best Experience</h2>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-slides">
+        <div class="slide active">
+          <img src="img1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="img2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="img3.jpg" alt="Slide 3">
+        </div>
+        <div class="slide">
+          <img src="img4.jpg" alt="Slide 4">
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <span id="prev-slide">❮</span>
+        <span id="next-slide">❯</span>
+      </div>
+    </div>
+
     <section id="home">
       <div class="home-wrapper">
         <h1 class="home-title">OUR BEST PRODUCTS</h1>
