@@ -12,7 +12,8 @@ function addToCart(productName, productPrice) {
   cartItems.push({ name: productName, price: productPrice });
   cartCount++;
   updateCartCount();
-  localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Simpan cart ke localStorage
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
   localStorage.setItem("cartCount", cartCount);
 }
 
@@ -20,8 +21,11 @@ function removeFromCart(index) {
   cartItems.splice(index, 1);
   cartCount--;
   updateCartCount();
-  localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Simpan cart setelah penghapusan
-  location.reload();
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  localStorage.setItem("cartCount", cartCount);
+
+  viewCart();
 }
 
 function viewCart() {
@@ -54,7 +58,12 @@ function viewCart() {
   cartSection.style.display = "block";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function handleMainPage() {
+  const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  cartItems = storedCartItems;
+  cartCount = storedCartItems.length;
+  updateCartCount();
+
   const addToCartButtons = document.querySelectorAll(".btn");
   addToCartButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -73,15 +82,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const viewCartButton = document.querySelector(".view-cart-btn");
   if (viewCartButton) {
     viewCartButton.addEventListener("click", function () {
-      window.location.href = "cartpages.html"; 
+      window.location.href = "cart.html"; // Arahkan ke halaman cart
     });
   }
+}
 
-  if (window.location.pathname.includes("cartpages.html")) {
-    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    cartItems = storedCartItems;
-    cartCount = storedCartItems.length;
-    viewCart();
+function handleCartPage() {
+  const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  cartItems = storedCartItems;
+  cartCount = storedCartItems.length;
+  updateCartCount();
+  viewCart();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.pathname.includes("cart.html")) {
+    handleCartPage();
+  } else {
+    handleMainPage();
   }
 });
 
