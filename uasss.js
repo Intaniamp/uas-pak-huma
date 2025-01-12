@@ -82,7 +82,7 @@ function handleMainPage() {
   const viewCartButton = document.querySelector(".view-cart-btn");
   if (viewCartButton) {
     viewCartButton.addEventListener("click", function () {
-      window.location.href = "cart.html"; // Arahkan ke halaman cart
+      window.location.href = "cartpages.html"; // Arahkan ke halaman cart
     });
   }
 }
@@ -96,7 +96,7 @@ function handleCartPage() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname.includes("cart.html")) {
+  if (window.location.pathname.includes("cartpages.html")) {
     handleCartPage();
   } else {
     handleMainPage();
