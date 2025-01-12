@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop Your Fit!</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="uts.js" defer></script>
+    <script src="uasss.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -138,20 +138,19 @@
         </p>
       </div>
     </section>
-      <?php 
-        require("koneksi.php");
-      ?>
-    <section id="contact">
-      <div class="contact-wrapper">
-        <h1 class="contact-title">Contact Us</h1>
-        <form action="insert.php" class="contact-form" method="post">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Submit</button>
+    <?php require("koneksi.php"); ?>
+<section id="contact">
+    <div class="contact-wrapper">
+        <h1 class="contact-title">Review</h1>
+        <form action="put.php?insert" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your review" required></textarea>
+            <button type="submit">Submit</button>
         </form>
-      </div>
-    </section>
+        <?php require("hasil.php"); ?>
+    </div>
+</section>
 
   </body>
 
