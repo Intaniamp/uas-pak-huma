@@ -73,15 +73,44 @@ document.addEventListener("DOMContentLoaded", function () {
   const viewCartButton = document.querySelector(".view-cart-btn");
   if (viewCartButton) {
     viewCartButton.addEventListener("click", function () {
-      window.location.href = "cartpages.html"; // Arahkan ke halaman cart
+      window.location.href = "cartpages.html"; 
     });
   }
 
-  // Jika berada di halaman cart.html, tampilkan cart
   if (window.location.pathname.includes("cartpages.html")) {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems = storedCartItems;
     cartCount = storedCartItems.length;
     viewCart();
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".slide");
+  const carouselSlides = document.querySelector(".carousel-slides");
+  const prevButton = document.getElementById("prev-slide");
+  const nextButton = document.getElementById("next-slide");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateSlidePosition() {
+    const offset = -currentIndex * 100;
+    carouselSlides.style.transform = `translateX(${offset}%)`;
+  }
+
+  function showNextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function showPrevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+
+  nextButton.addEventListener("click", showNextSlide);
+  prevButton.addEventListener("click", showPrevSlide);
+
+  setInterval(showNextSlide, 5000);
 });
