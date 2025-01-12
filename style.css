@@ -157,6 +157,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .product-card div {
@@ -478,10 +485,10 @@ td {
 
 .carousel-controls button:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.8); /* Efek hover pada tombol */
+  background-color: rgba(0, 0, 0, 0.8); 
   transform: scale(1.1);
 }
 
 .carousel-controls button:active {
-  transform: scale(0.95); /* Efek tombol mengecil saat ditekan */
+  transform: scale(0.95);
 }
