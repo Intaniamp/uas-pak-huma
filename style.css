@@ -409,3 +409,79 @@ td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   padding: 10px;
 }
+
+.carousel-heading {
+  text-align: center;
+  margin: 150px auto 10px auto;
+}
+
+
+.carousel-heading h2 {
+  font-size: 2.5rem;
+  color: #2d1975;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 55px auto 10px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.slide {
+  min-width: 100%;
+  height: auto;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin: 0 20px;
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Efek hover pada tombol */
+  transform: scale(1.1);
+}
+
+.carousel-controls button:active {
+  transform: scale(0.95); /* Efek tombol mengecil saat ditekan */
+}
