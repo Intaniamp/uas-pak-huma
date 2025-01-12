@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Jika berada di halaman cart.html, tampilkan cart
-  if (window.location.pathname.includes("cart.html")) {
+  if (window.location.pathname.includes("cartpages.html")) {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems = storedCartItems;
     cartCount = storedCartItems.length;
