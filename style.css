@@ -41,7 +41,7 @@ body {
 .navbar ul li a {
   text-decoration: none;
   padding: 10px 15px;
-  color: rgb(142, 141, 141);
+  color: rgb(4, 4, 4);
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -416,7 +416,6 @@ td {
   margin: 150px auto 10px auto;
 }
 
-
 .carousel-heading h2 {
   font-size: 2.5rem;
   color: #2d1975;
@@ -436,12 +435,10 @@ td {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .carousel-slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
 
 .slide {
   min-width: 100%;
@@ -473,13 +470,13 @@ td {
   cursor: pointer;
   border-radius: 50%;
   font-size: 18px;
-  transition: background-color 0.3s ease, transform 0.3s ease; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
   margin: 0 20px;
 }
 
 .carousel-controls button:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.8);
   transform: scale(1.1);
 }
 
