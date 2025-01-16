@@ -4,5 +4,4 @@
     if (!$koneksi) {
         die("connection error" . mysqli_connect_error());
     }
-    echo "connection successfull";
     ?>
