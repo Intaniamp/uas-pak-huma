@@ -12,7 +12,7 @@
     <h1>Data Produk</h1>
     <div class="box">
         <p><a href="tambah-produk.php">Tambah Data</a></p>
-        <table border="1" cellspacing="0" class="table">
+        <table class="table">
             <thead>
                 <tr>
                     <th>No</th>
