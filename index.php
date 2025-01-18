@@ -88,7 +88,6 @@
             <h1 class="featured-title">Our Featured Products</h1>
             <div class="product-grid">
                 <?php
-                // Ambil data produk dari database
                 $produk = mysqli_query($koneksi, "SELECT * FROM tb_product ORDER BY product_id DESC");
                 if (mysqli_num_rows($produk) > 0) {
                     while ($row = mysqli_fetch_assoc($produk)) {
