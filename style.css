@@ -470,3 +470,31 @@ td {
 .carousel-controls button:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    margin: 80px auto 10px auto;
+  }
+
+  .carousel-controls button {
+    padding: 8px;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    margin: 50px auto 10px auto;
+  }
+
+  .carousel-controls button {
+    padding: 6px;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  .slide img {
+    border-radius: 5px;
+  }
+}
