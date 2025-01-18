@@ -411,19 +411,6 @@ td {
   padding: 10px;
 }
 
-.carousel-heading {
-  text-align: center;
-  margin: 150px auto 10px auto;
-}
-
-.carousel-heading h2 {
-  font-size: 2.5rem;
-  color: #2d1975;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  text-transform: capitalize;
-  margin: 0;
-}
 
 .carousel {
   position: relative;
