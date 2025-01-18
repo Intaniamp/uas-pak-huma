@@ -32,6 +32,7 @@
       <ul id="cart-items-list">
       </ul>
       <span id="cart-total">0</span></p>
+    </section>
 
     <div class="carousel">
       <div class="carousel-slides">
