@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="stylecart.css">
 </head>
 <body>
-    <h1>Data Produk</h1>
+    <h1>Data Produk Arte DeKain</h1>
     <div class="box">
         <p><a href="tambah-produk.php">Tambah Data</a></p>
         <table class="table">
