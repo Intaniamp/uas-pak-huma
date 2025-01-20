@@ -473,7 +473,7 @@ td {
 
 @media (max-width: 768px) {
   .carousel {
-    margin: 80px auto 10px auto;
+    margin: 270px auto 10px auto;
   }
 
   .carousel-controls button {
@@ -485,7 +485,7 @@ td {
 
 @media (max-width: 480px) {
   .carousel {
-    margin: 50px auto 10px auto;
+    margin: 270px auto 10px auto;
   }
 
   .carousel-controls button {
